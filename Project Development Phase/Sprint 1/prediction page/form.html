@@ -1,0 +1,127 @@
+<html>
+
+<head>
+
+    <title>Prediction</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        h1{
+	     color: white;
+	     font-size: 50px;
+	     width: 1500px;
+	     font-weight: bold;
+	     text-align: center;
+        }
+        body {
+
+            font-family: Arial, Helvetica, sans-serif;
+            background: url(1.jpg);
+        }
+
+            input[type=text],
+            select {
+                width: 100%;
+                padding: 12px 20px;
+                margin: 8px 0;
+                display: inline-block;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                box-sizing: border-box;
+
+            }
+
+            .registelbtn {
+                background-color: #4CAF50;
+                color: white;
+                padding: 16px 20px;
+                margin: 8px 0;
+                border: none;
+                cursor: pointer;
+                width: 100%;
+                opacity: 0.9;
+            }
+
+            .registerbtn:hover {
+                opacity: 1;
+            }
+
+            input[type=submit]:hover {
+                background-color: #45a049;
+            }
+
+            .center {
+                margin: auto;
+                width: 60%;
+                border: 3px solid #070007c5;
+                padding: 10px;
+            }
+    </style>
+</head>
+
+<body>
+    
+    <h1>Liver Disease Prediction</h1>
+
+    <div class="center" style="height:80%; width:35%; background:white;  margin:0 auto">
+
+        <form action="/predict" method="post">
+            <br>
+            <br>
+            <br>
+        &nbsp; &nbsp;&nbsp;Age : &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gender :
+            <br>
+            <br>
+            <input type="number" id="Age" placeholder="Age " name="Age" style="width: 190px ; margin-left:17px;">  <input type="number" id="Gender"
+                placeholder="Gender (Male:1 , female:0)" name="Gender" style="width: 190px ; margin-left: 97px;">
+            <br>
+            <br>
+            
+            &nbsp; &nbsp;&nbsp;Total Bilirubin :&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Direct Bilirubin :
+            <br>
+            <br> <input type="text" id= "Total_Bilirubin" placeholder="Total_Bilirubin"
+                name="Total Bilirubin" style="width: 190px ; margin-left:17px;">
+             <input type="text" id="Direct_Bilirubin" placeholder="Direct Bilirubin"
+                name="Direct_Bilirubin" style="width: 190px ; margin-left: 97px;">
+            
+            <br>
+            <br>
+            &nbsp; &nbsp;&nbsp;Alkaline Phosphotase:&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Alamine Aminotransferase:
+            <br>
+            <br>
+            <input type="text" id="Alkaline_Phosphotase" placeholder="Alkaline Phosphotase"
+                name="Alkaline_Phosphotase" style="width: 190px ; margin-left: 17px;">
+             <input type="text" id="Alamine_Aminotransferase"
+                placeholder="Alamine Aminotransferase" name="Alamine_Aminotransferase" style="width: 190px ; margin-left: 95px;">
+            <br>
+            <br>
+            
+            &nbsp; &nbsp;&nbsp;Aspartate Aminotransferase:&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Total Protiens:
+            <br>
+            <br>
+             <input type=" text" id="Aspartate_Aminotransferase"
+                placeholder="Aspartate_Aminotransferase" name="Aspartate_Aminotransferase" style="width: 190px ; margin-left: 17px;">
+            <input type=" text" id="Total Protiens" placeholder="Total Protiens" name="Total Protiens" style="width: 190px ; margin-left: 97px;">
+            
+            <br>
+            <br>
+            
+            &nbsp; &nbsp;&nbsp;Albumin:&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Albumin and Globulin Ratio:
+            <br>
+            <br> 
+            <input type="text" id="Albumin" placeholder=" Albumin " name=" Albumin" style="width: 190px ; margin-left:17px;">
+             <input type="text" id="Albumin_and_Globulin_Ratio"
+                placeholder="Albumin and Globulin Ratio" name="Albumin_and_Globulin_Ratio" style="width: 190px ; margin-left: 100px;">
+            <br>
+            <br>
+            <br>
+            <button type="submit" style="width: 100px ; margin-left: 200px;">Predict</button>
+        </form>
+    </div>
+</body>
+
+</html>
